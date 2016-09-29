@@ -16,6 +16,8 @@ float mouseYyyOff;
 
 int opacity = 5;
 
+int splashTime = 10000;
+
 boolean splashApp = true;
 boolean runonce = true;
 
@@ -26,7 +28,6 @@ float ms;
 PGraphics canvas;
 
 PShape controls;
-PShape saved;
 PShape splash;
 
 void setup() {
@@ -49,8 +50,7 @@ void setup() {
   canvas = createGraphics(width, height);
  
   controls = loadShape("svg/controls.svg");
-  saved = loadShape("svg/saved.svg");
-  splash = loadShape("svg/splash.svg");
+  splash = loadShape("svg/scimitar.svg");
  
   fill(yellow);
   ms = millis();
@@ -64,7 +64,7 @@ void draw() {
       drawSplash();  
     }
   
-    if( millis()  > ms + 3000 && runonce == true ) {
+    if( millis()  > ms + splashTime && runonce == true ) {
     
       splashApp = false;
       launchApp = true;
@@ -80,7 +80,7 @@ void drawSplash(){
     
     canvas.beginDraw();
     canvas.shapeMode(CORNER);
-    canvas.shape(controls, 0, height - 100, width / 2, 100);
+    canvas.shape(controls, 0, height - 100, width / 1.5, 100);
     canvas.shapeMode(CENTER);
     canvas.shape(splash, width/2, height /2, width / 1.5, height / 2);
     canvas.endDraw();
@@ -142,22 +142,6 @@ void keyPressed() {
     
     if(key == RETURN || key == ENTER) {
       saveFrame("rendered/"+ d +"–"+ m +"–"+ y +"–frame-####.jpg");
-      
-      ms = millis();
-      
-      if(millis() > ms + 1000 ){
-      
-        canvas.beginDraw();
-        canvas.clear();
-        canvas.shapeMode(CORNER);
-        canvas.shape(saved, width - 100, height - 100, 100, 100);
-        canvas.endDraw();  
-        
-        image(canvas, 0, 0);
-        
-      }
-      
-      
     }
   
     if (key == BACKSPACE) {
