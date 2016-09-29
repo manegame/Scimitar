@@ -1,15 +1,18 @@
 ##Scimitar
 
-Work in Progress.
+By [Manus Nijhoff](http://www.manusnijhoff.nl)
 
-####Current features
+###Examples
 
-Colors: RGBY BW
+![Ex.1](http://i.imgur.com/Mkgxl2x.jpg)
 
-Full Screen Drawing Mode
 
-ENTER to save
 
-BACKSPACE to clear canvas
+![Ex.3](http://i.imgur.com/DIpglcU.jpg)
 
-Goofy Splash Screen
+
+###Commands
+
+- `R` Red, `G` Green, `B` Blue, `Y` Yellow, `X` Black, `W` White
+- `ENTER` / `RETURN` to save 
+- `BACKSPACE` to clear canvas
