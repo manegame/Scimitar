@@ -2,6 +2,12 @@
 
 By [Manus Nijhoff](http://www.manusnijhoff.nl)
 
+###Installation
+
+- [Install Processing](https://processing.org/download/)
+- Clone this repository as ZIP -> unzip.
+- Open tool.pde in Processing -> run
+
 ###Examples
 
 ![Ex.1](http://i.imgur.com/Mkgxl2x.jpg)
